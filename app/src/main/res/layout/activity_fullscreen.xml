@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backact"
+    tools:context="com.papanews.News_page">
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtube_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                app:autoPlay="false"
+                app:showFullScreenButton="false"
+                app:enableAutomaticInitialization="false"
+                app:showSeekBar="false"
+                app:showVideoCurrentTime="false"
+                app:showVideoDuration="false"
+                app:showYouTubeButton="false" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/youtube_player_view"
+                android:layout_marginTop="-40dp"
+                android:background="@drawable/fadedgraydown" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/fadedgrayup" />
+
+            <ImageView
+                android:id="@+id/backimg"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/leftarrow"
+                app:tint="#fff" />
+
+            <!--            <com.google.android.material.textview.MaterialTextView-->
+            <!--                android:id="@+id/lang"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@+id/youtube_player_view"-->
+            <!--                android:layout_alignParentRight="true"-->
+            <!--                android:layout_marginTop="-20dp"-->
+            <!--                android:layout_marginRight="10dp"-->
+            <!--                android:fontFamily="@font/lato"-->
+            <!--                android:text="ENGLISH"-->
+            <!--                android:textColor="@color/lstextcolor"-->
+            <!--                android:textSize="15dp" />-->
+            <Spinner
+
+                android:id="@+id/lang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/youtube_player_view"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-20dp"
+                android:layout_marginRight="7dp"
+                android:background="@color/backact" />
+            <!--    <View-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="50dp"-->
+            <!--        android:background=""/>-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/youtube_player_view"
+                android:padding="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@string/font_style_maintitle"
+                    android:text="Breaking News Modi is thinking."
+                    android:textColor="@color/lstextcolor"
+                    android:textSize="30dp" />
+
+                <ImageView
+                    android:id="@+id/icon_val"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/headline"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/toi" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/pname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headline"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/icon_val"
+                    android:fontFamily="@string/font_style_maintitle"
+                    android:text="Times Of India"
+                    android:textColor="@color/lstextcolor"
+                    android:textSize="15dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/pdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pname"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/icon_val"
+                    android:fontFamily="@string/font_style_maintitle"
+                    android:text="29th May 2021"
+                    android:textColor="@color/lstextcolor"
+                    android:textSize="15dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/pdate"
+                    android:layout_below="@+id/pname"
+                    android:text="|"
+                    android:fontFamily="@font/lato"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/line"
+                    android:layout_below="@+id/pname"
+                    android:text="10"
+                    android:fontFamily="@font/lato"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/view"
+                    android:layout_below="@+id/pname"
+                    android:text="Views"
+                    android:fontFamily="@string/font_style_maintitle"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cta"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/icon_val"
+                    android:layout_marginTop="15dp"
+                    android:elevation="20dp"
+                    android:fontFamily="@font/sanfrancisco"
+                    android:text="Visit Site"
+                    android:textColor="@color/lstextcolor"
+                    android:backgroundTint="@color/buttoncol"
+                    />
+
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/temp"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/icon_val"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_toRightOf="@+id/cta"
+                    android:src="@drawable/share"
+                    app:tint="#FFF" />
+
+
+                <ImageView
+                    android:id="@+id/share"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/icon_val"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_toRightOf="@+id/cta"
+                    android:src="@drawable/share"
+                    app:tint="@color/white" />
+
+                <ImageView
+                    android:id="@+id/save"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/icon_val"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_toRightOf="@+id/share"
+                    android:src="@drawable/bookwhite"
+                    app:tint="@color/white" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/minidis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cta"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@string/font_style_main"
+                    android:text="@string/temporary"
+                    android:textColor="@color/lstextcolor"
+                    android:textSize="20dp" />
+                <!--            <com.google.android.material.textview.MaterialTextView-->
+                <!--                android:id="@+id/discription"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:fontFamily="@font/lato"-->
+                <!--                android:text="@string/dummy_content"-->
+                <!--                android:textSize="15dp"-->
+                <!--                android:layout_below="@id/minidis"-->
+                <!--                android:layout_marginTop="20dp"-->
+                <!--                android:textColor="@color/lstextcolor" />-->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rmore"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_below="@+id/minidis"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp"
+                    android:elevation="20dp"
+                    android:backgroundTint="@color/buttoncol"
+                    android:padding="10dp"
+                    android:text="Read More"
+                    android:textColor="@color/lstextcolor"
+                     />
+
+                <RelativeLayout
+                    android:id="@+id/cv"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_below="@+id/rmore"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/roundgray_new">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/lato"
+                        android:text="Become Reporter"
+                        android:textColor="@color/lstextcolor"
+                        android:textSize="18dp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/videocamera" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/addbackground"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <View
+                android:id="@+id/viewbb"
+                android:layout_width="80dp"
+                android:layout_height="8dp"
+                android:background="@drawable/buttonstyle"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="#8F8F8F"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/headline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/font_style_maintitle"
+                android:layout_below="@+id/viewbb"
+                android:text="Breaking News Modi is thinking."
+                android:textColor="@color/lstextcolor"
+                android:layout_marginTop="15dp"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:id="@+id/icon_val2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/headline2"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/toi"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/pname2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headline2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/icon_val2"
+                android:fontFamily="@font/lato"
+                android:text="Times Of India"
+                android:textColor="@color/lstextcolor"
+                android:textSize="15dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/pdate2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pname2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/icon_val2"
+                android:fontFamily="@font/lato"
+                android:text="29th May 2021"
+                android:textColor="@color/lstextcolor"
+                android:textSize="15dp" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/line2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/pdate2"
+                android:layout_below="@+id/pname2"
+                android:text="|"
+                android:fontFamily="@font/lato"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/view2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/line2"
+                android:layout_below="@+id/pname2"
+                android:text="10"
+                android:fontFamily="@font/lato"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/view2"
+                android:layout_below="@+id/pname2"
+                android:text="Views"
+                android:fontFamily="@font/lato"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cta2"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/icon_val2"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/buttoncol"
+                android:elevation="20dp"
+                android:fontFamily="@font/lato"
+                android:text="Visit Site"
+                android:textColor="@color/lstextcolor"
+                android:textSize="18dp" />
+
+
+            <ImageView
+                android:id="@+id/share2"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/icon_val2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@+id/cta2"
+                android:src="@drawable/share"
+                app:tint="#FFF" />
+
+            <ImageView
+                android:id="@+id/save2"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/icon_val2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@+id/share2"
+                android:src="@drawable/bookmark"
+                app:tint="#FFF" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/minidis2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cta2"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@string/font_style_main"
+                android:text="@string/temporary"
+                android:textColor="@color/lstextcolor"
+                android:textSize="20dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/discription2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/minidis2"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@string/font_style_main"
+                android:text="@string/dummy_content"
+                android:textColor="@color/lstextcolor"
+                android:textSize="20dp" />
+
+            <!--            <Button-->
+            <!--                android:id="@+id/rmore2"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="50dp"-->
+            <!--                android:layout_below="@+id/minidis2"-->
+            <!--                android:text="Read More"-->
+            <!--                android:textSize="18dp"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:layout_marginLeft="15dp"-->
+            <!--                android:layout_marginRight="15dp"-->
+            <!--                android:background="@drawable/roundgray"-->
+
+            <!--                android:elevation="20dp"-->
+            <!--                android:textColor="@color/lstextcolor"-->
+            <!--                android:padding="10dp"-->
+            <!--                />-->
+            <RelativeLayout
+                android:id="@+id/cv2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/discription2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/roundgray_new">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/lato"
+                    android:text="Become Reporter"
+                    android:textColor="@color/lstextcolor"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/videocamera" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

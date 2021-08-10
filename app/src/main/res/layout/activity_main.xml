@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.papanews.DashBoard">
+
+
+    <ImageView
+        android:id="@+id/introsplash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/intro_splash">
+
+    </ImageView>
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="90dp"
+        android:layout_height="90dp">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_marginBottom="30dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/loading"
+            />
+
+    </RelativeLayout>
+
+<!--    <HorizontalScrollView-->
+<!--        android:id="@+id/scroll_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:scrollbars="none"-->
+<!--    android:background="#F6DACC"-->
+<!--        android:visibility="gone">-->
+
+<!--        <FrameLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <ImageView-->
+<!--                -->
+<!--                android:layout_width="1000dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:scaleType="fitXY"-->
+<!--                android:src="@drawable/bgfinalgradient" />-->
+
+<!--        </FrameLayout>-->
+
+<!--    </HorizontalScrollView>-->
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/mainTitletab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            app:tabMode="auto"
+            app:tabTextAppearance="@style/MyCustomTabText"
+            app:tabTextColor="@color/card_colors_txt_inv"
+            android:backgroundTint="#00000000"
+            tools:ignore="MissingConstraints" />
+
+    </RelativeLayout>
+
+
+
+<Button
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#000"
+    android:text="refresh"
+    android:id="@+id/ref"/>
+
+</RelativeLayout>

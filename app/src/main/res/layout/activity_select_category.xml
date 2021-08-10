@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context="com.papanews.select_category">
+
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/cattext1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@string/font_style_maintitle"
+            android:text="FOLLOW YOUR INTEREST"
+            android:textAlignment="center"
+            android:textColor="@color/lstextcolor"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/cattext2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cattext1"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@string/font_style_main"
+            android:text="Choose a few of your favorite topics, then we will build personalised feed for you"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cattext2"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:id="@+id/first"
+                            android:layout_width="match_parent"
+                            android:layout_height="145dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/b1"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:layout_margin="6dp"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="6dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="120dp">
+
+                                    <ImageView
+                                        android:id="@+id/i1"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_business_icon_01" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="25dp"
+                                        android:layout_alignBottom="@+id/i1"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginBottom="10dp"
+                                        android:fontFamily="@string/font_style_main"
+                                        android:gravity="bottom"
+                                        android:text="Business"
+                                        android:textColor="@color/lstextcolor"
+                                        android:textSize="17dp" />
+                                </RelativeLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/b2"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:layout_margin="6dp"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="6dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/i2"
+                                        android:layout_width="65dp"
+                                        android:layout_height="65dp"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_startup_01" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="25dp"
+                                        android:layout_alignBottom="@+id/i2"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginBottom="10dp"
+                                        android:fontFamily="@string/font_style_main"
+                                        android:gravity="bottom"
+                                        android:text="Startup"
+                                        android:textColor="@color/lstextcolor"
+                                        android:textSize="17dp" />
+                                </RelativeLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/b3"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:layout_margin="6dp"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="6dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/i3"
+                                        android:layout_width="65dp"
+                                        android:layout_height="65dp"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_technology_01" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="25dp"
+                                        android:layout_alignBottom="@+id/i3"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginBottom="10dp"
+                                        android:fontFamily="@string/font_style_main"
+                                        android:gravity="bottom"
+                                        android:text="Technology"
+                                        android:textColor="@color/lstextcolor"
+                                        android:textSize="17dp" />
+                                </RelativeLayout>
+                            </com.google.android.material.card.MaterialCardView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/second"
+                            android:layout_width="match_parent"
+                            android:layout_height="145dp"
+                            android:layout_below="@+id/first"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/b4"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:layout_margin="6dp"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="6dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/i4"
+                                        android:layout_width="65dp"
+                                        android:layout_height="65dp"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_entertainment_01" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="25dp"
+                                        android:layout_alignBottom="@+id/i4"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginBottom="10dp"
+                                        android:fontFamily="@string/font_style_main"
+                                        android:gravity="bottom"
+                                        android:text="Entertainment"
+                                        android:textColor="@color/lstextcolor"
+                                        android:textSize="15dp" />
+                                </RelativeLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/b5"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:layout_margin="6dp"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="6dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/i5"
+                                        android:layout_width="65dp"
+                                        android:layout_height="65dp"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_sports_01" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="25dp"
+                                        android:layout_alignBottom="@+id/i5"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginBottom="10dp"
+                                        android:fontFamily="@string/font_style_main"
+                                        android:gravity="bottom"
+                                        android:text="Sports"
+                                        android:textColor="@color/lstextcolor"
+                                        android:textSize="15dp" />
+                                </RelativeLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/b6"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:layout_margin="6dp"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="6dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/i6"
+                                        android:layout_width="65dp"
+                                        android:layout_height="65dp"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_politics_01" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="25dp"
+                                        android:layout_alignBottom="@+id/i6"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginBottom="10dp"
+                                        android:fontFamily="@string/font_style_main"
+                                        android:gravity="bottom"
+                                        android:text="Politics"
+                                        android:textColor="@color/lstextcolor"
+                                        android:textSize="15dp" />
+                                </RelativeLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/third"
+                            android:layout_width="match_parent"
+                            android:layout_height="165dp"
+                            android:layout_below="@+id/second"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/b7"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:layout_margin="6dp"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="6dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/i7"
+                                        android:layout_width="65dp"
+                                        android:layout_height="65dp"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_international_01" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="25dp"
+                                        android:layout_alignBottom="@+id/i7"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginBottom="10dp"
+                                        android:fontFamily="@string/font_style_main"
+                                        android:gravity="bottom"
+                                        android:text="International"
+                                        android:textColor="@color/lstextcolor"
+                                        android:textSize="15dp" />
+                                </RelativeLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/b8"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:layout_margin="6dp"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="6dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/i8"
+                                        android:layout_width="65dp"
+                                        android:layout_height="65dp"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_influencer_01" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="25dp"
+                                        android:layout_alignBottom="@+id/i8"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginBottom="10dp"
+                                        android:fontFamily="@string/font_style_main"
+                                        android:gravity="bottom"
+                                        android:text="Influences"
+                                        android:textColor="@color/lstextcolor"
+                                        android:textSize="15dp" />
+                                </RelativeLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/b9"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:layout_margin="6dp"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="6dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/i9"
+                                        android:layout_width="65dp"
+                                        android:layout_height="65dp"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_miscellaneous_01" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="25dp"
+                                        android:layout_alignBottom="@+id/i9"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginBottom="10dp"
+                                        android:fontFamily="@string/font_style_main"
+                                        android:gravity="bottom"
+                                        android:text="Miscellaneous"
+                                        android:textColor="@color/lstextcolor"
+                                        android:textSize="15dp" />
+                                </RelativeLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/next"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_below="@+id/third"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="20dp"
+                            android:backgroundTint="@color/buttoncol"
+                            android:text="Next"
+                            android:textColor="#fff"
+                            android:textSize="20dp" />
+
+
+                    </RelativeLayout>
+
+
+                </ScrollView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

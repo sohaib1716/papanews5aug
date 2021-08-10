@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:id="@+id/reltouch"
+    android:background="#000">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:visibility="gone"
+        android:id="@+id/nextTutorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="START"
+        android:backgroundTint="@color/buttoncol"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+        android:id="@+id/skipTutorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:textColor="#fff"
+        android:backgroundTint="@color/buttoncol"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        />
+
+
+    <com.yuyakaido.android.cardstackview.CardStackView
+        android:id="@+id/tutorial_card_Stack"
+        android:layout_width="match_parent"
+        android:layout_height="530dp"
+        android:layout_below="@+id/descTutorial"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="70dp">
+
+    </com.yuyakaido.android.cardstackview.CardStackView>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/swipeup"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/swipeup"
+        android:layout_marginBottom="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:tint="#ffffff"
+        />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/newsre"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/news_repo"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="120dp"
+        android:layout_above="@+id/descTutorial"
+        />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:visibility="gone"
+        android:tint="#fff"
+        android:id="@+id/moreDetails"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/more_details"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="120dp"
+        android:layout_above="@+id/descTutorial"
+        />
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:tint="#fff"
+        android:visibility="gone"
+        android:id="@+id/taphere"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/taphere"
+        android:layout_marginBottom="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:tint="#fff"
+        android:visibility="gone"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/playgif"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/playgif"
+        android:layout_marginBottom="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        />
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:visibility="gone"
+        android:id="@+id/audioGif"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/audiogif"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/ttaud"
+        />
+
+
+
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_marginTop="90dp"
+        android:id="@+id/descTutorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Swipe up for more news"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:id="@+id/ttaud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="70dp"
+        android:text="You can hear the news and can enjoy the news continuously without interruption"
+        android:textColor="#fff"
+        android:textSize="25dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
+
+    <RelativeLayout
+android:visibility="gone"
+        android:id="@+id/tutorial_musicPlayer"
+        android:background="#26303A"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:src="@drawable/noimage"
+            android:id="@+id/tutoAudioImage"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit ="marquee_forever"
+            android:scrollHorizontally="true"
+            android:fontFamily="@font/lato"
+            android:textStyle="bold"
+            android:id="@+id/tutoAudioTitle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:layout_toRightOf="@+id/tutoAudioImage"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tutoSub"
+            android:maxLines="1"
+            android:maxLength="25"
+            android:text="Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tutoAudioImage"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="10dp"
+            android:textColor="#ffffff"
+            />
+
+        <ImageView
+            android:layout_marginRight="0dp"
+            android:layout_toLeftOf="@+id/forward"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_baseline_play_arrow_24"
+            android:id="@+id/play_tut"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:backgroundTint="#ffffff"
+            />
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/play_tut"
+            android:background="@drawable/ic_baseline_navigate_before_24"
+            android:backgroundTint="#ffffff"
+            android:id="@+id/pause"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:id="@+id/forward"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/ic_baseline_navigate_next_24"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

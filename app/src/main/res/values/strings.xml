@@ -1,0 +1,202 @@
+<resources>
+    <string name="app_name">PapaNews</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+
+    <string name="temporary">Amid a formidable rise in coronavirus cases in Delhi, Chief Minister Arvind Kejriwal stated that COVID-19 situation in the national capital will be under control in 7-10 days."</string>
+
+    <string name="termsandcondition">
+
+        Terms &amp; Conditions
+        \n
+        By downloading or using the app, these terms will automatically apply to you – you should make
+        sure therefore that you read them carefully before using the app. You’re not allowed to copy,
+        or modify the app, any part of the app, or our trademarks in any way. You’re not allowed to
+        attempt to extract the source code of the app, and you also shouldn’t try to translate the
+        app into other languages, or make derivative versions. The app itself, and all the trade marks,
+        copyright, database rights and other intellectual property rights related to it, still belong to Lapaas.
+        \n
+
+        Lapaas is committed to ensuring that the app is as useful and efficient as possible.
+        For that reason, we reserve the right to make changes to the app or to charge for its services,
+        at any time and for any reason. We will never charge you for the app or its services without making
+        it very clear to you exactly what you’re paying for.
+        \n
+
+        The Papa News - Short Audio News Papa News - Short Audio News app stores and processes personal
+        data that you have provided to us, in order to provide our Service. It’s your responsibility to
+        keep your phone and access to the app secure. We therefore recommend that you do not jailbreak or
+        root your phone, which is the process of removing software restrictions and limitations imposed by
+        the official operating system of your device. It could make your phone vulnerable to malware/viruses/malicious programs,
+        compromise your phone’s security features and it could mean that the
+        Papa News - Short Audio News Papa News - Short Audio News app won’t work properly or at all.
+        \n
+
+        The app does use third party services that declare their own Terms and Conditions.
+        \n
+        Link to Terms and Conditions of third party service providers used by the app
+        \n
+        Google Play Services - https://policies.google.com/terms
+        Google Analytics for Firebase - https://firebase.google.com/terms/analytics
+        Firebase Crashlytics - https://firebase.google.com/terms/crashlytics
+        Facebook - https://www.facebook.com/legal/terms/plain_text_terms
+        Papanews - https://papanews.in
+        \n
+        You should be aware that there are certain things that Lapaas will not take responsibility for. Certain functions of the app will require the app to have an active internet connection. The connection can be Wi-Fi, or provided by your mobile network provider, but Lapaas cannot take responsibility for the app not working at full functionality if you don’t have access to Wi-Fi, and you don’t have any of your data allowance left.
+        \n
+        If you’re using the app outside of an area with Wi-Fi, you should remember that your terms of the agreement with your mobile network provider will still apply. As a result, you may be charged by your mobile provider for the cost of data for the duration of the connection while accessing the app, or other third party charges. In using the app, you’re accepting responsibility for any such charges, including roaming data charges if you use the app outside of your home territory (i.e. region or country) without turning off data roaming. If you are not the bill payer for the device on which you’re using the app, please be aware that we assume that you have received permission from the bill payer for using the app.
+        \n
+        Along the same lines, Lapaas cannot always take responsibility for the way you use the app i.e. You need to make sure that your device stays charged – if it runs out of battery and you can’t turn it on to avail the Service, Lapaas cannot accept responsibility.
+        \n
+        With respect to Lapaas’s responsibility for your use of the app, when you’re using the app, it’s important to bear in mind that although we endeavour to ensure that it is updated and correct at all times, we do rely on third parties to provide information to us so that we can make it available to you. Lapaas accepts no liability for any loss, direct or indirect, you experience as a result of relying wholly on this functionality of the app.
+        \n
+        At some point, we may wish to update the app. The app is currently available on Android – the
+        requirements for system(and for any additional systems we decide to extend the availability of the app to)
+        may change, and you’ll need to download the updates if you want to keep using the app. Lapaas does
+        not promise that it will always update the app so that it is relevant to you and/or works with
+        the Android version that you have installed on your device. However, you promise to always accept
+        updates to the application when offered to you, We may also wish to stop providing the app, and may
+        terminate use of it at any time without giving notice of termination to you. Unless we tell you otherwise,
+        upon any termination, (a) the rights and licenses granted to you in these terms will end; (b)
+        you must stop using the app, and (if needed) delete it from your device.
+        \n
+        Changes to This Terms and Conditions
+        We may update our Terms and Conditions from time to time. Thus, you are advised to review this page periodically
+        for any changes. We will notify you of any changes by posting the new Terms and Conditions on this page.
+        \n
+        These terms and conditions are effective as of 2021-08-03
+        \n
+        Contact Us
+        If you have any questions or suggestions about our Terms and Conditions,
+        do not hesitate to contact us at
+        \n
+        lapaasindia@gmail.com.
+        \n\n\n
+
+    </string>
+
+    <string name="dummy_content">NEW DELHI: West Bengal chief minister Mamata Banerjee on Saturday accused the Prime Minister\'s Office (PMO) of humiliating her after a brief meeting with PM Modi over the devastation caused by Cyclone Yaas took a controversial turn. However, the BJP hit back at the TMC supremo and alleged that it was Mamata who had insulted the PM Modi.On Friday, the central government as well as several senior ministers had accused Mamata of skipping the meeting and making PM Modi wait.Addressing the controversy, Mamata said today she felt insulted since BJP leaders and the state governor were called for the cyclone review meeting which was meant to be between her and the Prime Minister."When we reached, meeting had started. They asked us to sit, I asked them to allow us a minute to submit the report. (The) SPG told us that meeting will be after 1 hour. I saw empty chairs in conference room; was told that meeting was between CM and PM but why were there other BJP leaders," the Trinamool chief asked.Mamata further said that she is ready to even touch PM Modi\'s feet for the welfare of the people but won\'t tolerate insults."If Prime Minister asked me to touch his feet for welfare of the people of Bengal, I am ready to do that, but I should not be insulted," she said.Taking a dig at the Prime Minister, Mamata accused Modi of playing "vendetta politics" since he is yet to come to terms with the BJP\'s defeat in the recent West Bengal elections She also urged the Prime Minister to withdraw Friday order recalling the West Bengal chief secretary."There should be some courtesy. The Centre is not letting the state work. Bengal is my priority and ll never put it in danger. I will remain a security guard for the people here," she said.The West Bengal chief minister added that the tweets posted by several senior ministers over the issue were meant to "tarnish her image". </string>
+
+    <string name="adusc">
+
+
+        Papa news is a news app that selects the latest and best news from multiple national and
+        international sources and summarises them into a short video to help you stay informed of
+        the current affairs. Whether it’s the latest government policies or shake ups in bollywood,
+        we get them covered and delivered super fast! Get updated with the latest news and current
+        affairs in a jiffy!
+        \n\n
+
+        What make us unique
+        \n
+        My Feed – A feed of latest stories, videos and other content personalised only for you!
+        \n\n
+
+        ● Papa news  intelligently learns your preferences as you swipe, and displays stories personalised for you in ‘My Feed’
+        \n\n
+
+        News Categories - A vast variety in the same app
+        \n\n
+        ● papa news curates all types of news and headlines from topics like India, politics,
+        entertainment, business, technology, startup, world, sports, International, Influences,
+        and Miscellaneous– all in one place
+        \n
+        ● News is sourced from various categories and various sources, making sure that you always get the best
+        \n
+        ● Get limited daily notifications for the most important news and breaking news of the day.
+        \n
+        ● Schedule Notification according to you with Notification Manager.
+        \n
+
+
+        \n\n\n
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_select_category">select_category</string>
+
+    <string name="title_activity_saved_posts">saved_posts</string>
+
+    <string name="facebook_app_id">239348004261289</string>
+    <string name="fb_login_protocol_scheme">fb239348004261289</string>
+
+    <!-- Strings used for fragments for navigation -->
+
+    <!--	time picker-->
+    <string name="time_pick">Pick the time and press save button</string>
+    <string name="time_save">Save</string>
+    <string name="time_selected"></string>
+    <string name="time_current">Notification time set at:</string>
+
+
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="font_style_main">"@font/sanfrancisco"</string>
+    <string name="font_style_maintitle">"@font/sanfrancisco"</string>
+
+    <string name="slide_1_title">Welcome to PapaNews!</string>
+    <string name="slide_1_desc">Here we provide you all the latest News in our application with clear explanation.</string>
+
+    <string name="slide_2_title">Become Reporter</string>
+    <string name="slide_2_desc">You can also become a reporter by submitting your own news.</string>
+
+
+    <string-array name="statename">
+        <item value="Andhra Pradesh">Andhra Pradesh</item>
+        <item value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</item>
+        <item value="Arunachal Pradesh">Arunachal Pradesh</item>
+        <item value="Assam">Assam</item>
+        <item value="Bihar">Bihar</item>
+        <item value="Chandigarh">Chandigarh</item>
+        <item value="Chhattisgarh">Chhattisgarh</item>
+        <item value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</item>
+        <item value="Daman and Diu">Daman and Diu</item>
+        <item value="Delhi">Delhi</item>
+        <item value="Lakshadweep">Lakshadweep</item>
+        <item value="Puducherry">Puducherry</item>
+        <item value="Goa">Goa</item>
+        <item value="Gujarat">Gujarat</item>
+        <item value="Haryana">Haryana</item>
+        <item value="Himachal Pradesh">Himachal Pradesh</item>
+        <item value="Jammu and Kashmir">Jammu and Kashmir</item>
+        <item value="Jharkhand">Jharkhand</item>
+        <item value="Karnataka">Karnataka</item>
+        <item value="Kerala">Kerala</item>
+        <item value="Madhya Pradesh">Madhya Pradesh</item>
+        <item value="Maharashtra">Maharashtra</item>
+        <item value="Manipur">Manipur</item>
+        <item value="Meghalaya">Meghalaya</item>
+        <item value="Mizoram">Mizoram</item>
+        <item value="Nagaland">Nagaland</item>
+        <item value="Odisha">Odisha</item>
+        <item value="Punjab">Punjab</item>
+        <item value="Rajasthan">Rajasthan</item>
+        <item value="Sikkim">Sikkim</item>
+        <item value="Tamil Nadu">Tamil Nadu</item>
+        <item value="Telangana">Telangana</item>
+        <item value="Tripura">Tripura</item>
+        <item value="Uttar Pradesh">Uttar Pradesh</item>
+        <item value="Uttarakhand">Uttarakhand</item>
+        <item value="West Bengal">West Bengal</item>
+    </string-array>
+
+
+    <string-array name="profession" >
+        <item value="Student">Student</item>
+        <item value="Freelancer">Freelancer</item>
+        <item value="Professor">Professor</item>
+        <item value="Business">Business</item>
+        <item value="Content Creator">Content Creator</item>
+        <item value="Homemaker">Homemaker</item>
+        <item value="Retired">Retired</item>
+    </string-array>
+
+
+    <string name="app_link">
+    https://l.linklyhq.com/l/X0fq
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- Strings related to login -->
+
+
+</resources>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="20dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/CardbgColor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradientbackground"
+        android:elevation="10dp"
+        android:padding="25dp">
+
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:scaleType="centerCrop" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/news_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_image"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@string/font_style_main"
+            android:text="COVID-19 situation should be under control in 7-10 days in Delhi: Arvind Kejriwal"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/discription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/news_title"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@string/font_style_main"
+            android:text="@string/temporary"
+            android:textColor="#EFEEEE"
+            android:textSize="12dp" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/srcimage"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/toi"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/srcName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/srcimage"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@string/font_style_main"
+            android:text="Times of India"
+            android:textColor="@android:color/white"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/views"
+            android:text="20 Views"
+            android:layout_toRightOf="@+id/srcName"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:id="@+id/cancel_card"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/share_card"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_baseline_cancel_24"
+            app:tint="#FFFFFF" />
+
+
+        <ImageView
+            android:id="@+id/share_card"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/share"
+            app:tint="#FFFFFF" />
+
+        <!--                <ImageView-->
+        <!--                    android:id="@+id/share"-->
+        <!--                    android:layout_width="40dp"-->
+        <!--                    android:layout_height="30dp"-->
+        <!--                    android:layout_below="@+id/views"-->
+        <!--                    android:layout_marginLeft="30dp"-->
+        <!--                    android:layout_toRightOf="@+id/source"-->
+        <!--                    android:src="@drawable/share"-->
+        <!--                    app:tint="#FFF" />-->
+
+        <!--                <ImageView-->
+        <!--                    android:layout_width="40dp"-->
+        <!--                    android:layout_height="30dp"-->
+        <!--                    android:layout_below="@+id/views"-->
+
+        <!--                    android:layout_marginLeft="30dp"-->
+        <!--                    android:layout_toRightOf="@+id/share"-->
+        <!--                    android:src="@drawable/bookmark"-->
+        <!--                    app:tint="#FFF" />-->
+
+        <com.google.android.material.textview.MaterialTextView
+            android:visibility="gone"
+            android:id="@+id/longText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/overlay_black"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_forward_black_24dp" />
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/overlay_black"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/overlay_black"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_downward_black_24dp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/overlay_black"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_upward_black_24dp" />
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

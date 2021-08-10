@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backact"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.papanews.Upload_News">
+
+
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="visible"
+        android:id="@+id/relaitve_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:gravity="center"
+            android:id="@+id/completeall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complete all steps to be a reporter"
+            android:textSize="25dp"
+            android:textColor="#ffffff"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/uploadLogin"
+            android:layout_marginTop="20dp"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/completeall"
+            android:text="Login"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:backgroundTint="@color/buttoncol"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/verify_your_profile"
+            android:layout_marginTop="20dp"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/uploadLogin"
+            android:text="Verify Porifle"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:backgroundTint="@color/buttoncol"
+            />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/upload_verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/relative_upload"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:backgroundTint="#0D7BD3"
+                android:visibility="gone"
+                android:id="@+id/prog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="300dp"
+                />
+
+
+            <TextView
+                android:id="@+id/uvt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload News details"
+                android:textSize="28dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:fontFamily="@string/font_style_main"
+                android:textColor="@color/lstextcolor"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:fontFamily="@string/font_style_main"
+                android:id="@+id/t1"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/uvt1"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edback"
+                android:gravity="top"
+                android:hint="News title"
+                android:inputType="text|textMultiLine|textCapSentences"
+                android:maxLines="20"
+                android:padding="10dp"
+                android:textColor="@color/ettextcolor"
+                android:textColorHint="@color/ettextcolor"
+                android:textSize="20dp" />
+
+
+            <EditText
+                android:fontFamily="@string/font_style_main"
+                android:id="@+id/t2"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/t1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edback"
+                android:gravity="top"
+                android:hint="Short Description"
+                android:inputType="text|textMultiLine|textCapSentences"
+                android:maxLines="50"
+                android:padding="10dp"
+                android:textColor="@color/ettextcolor"
+                android:textColorHint="@color/ettextcolor"
+                android:textSize="20dp" />
+
+
+            <RelativeLayout
+                android:gravity="center"
+                android:id="@+id/downdwon"
+                android:layout_below="@+id/t2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/image_bg"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:gravity="center"
+                android:id="@+id/bbr"
+                android:layout_below="@+id/downdwon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:fontFamily="@string/font_style_main"
+                    android:id="@+id/browse"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/buttoncol"
+                    android:padding="10dp"
+                    android:text="Browse Image"
+                    android:textColor="#ffffff" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/browusevideo"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/browse"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/buttoncol"
+                    android:text="Browse Video"
+                    android:textColor="#ffffff"
+                    />
+
+            </RelativeLayout>
+
+
+            <EditText
+                android:fontFamily="@string/font_style_main"
+                android:id="@+id/longPhp"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bbr"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edback"
+                android:gravity="top"
+                android:hint="Long Description"
+                android:inputType="text|textMultiLine|textCapSentences"
+                android:maxLines="100"
+                android:padding="10dp"
+                android:textColor="@color/ettextcolor"
+                android:textColorHint="@color/ettextcolor"
+                android:textSize="20dp" />
+
+
+
+            <EditText
+                android:fontFamily="@string/font_style_main"
+                android:id="@+id/location"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/longPhp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edback"
+                android:gravity="top"
+                android:hint="News Location"
+                android:inputType="text|textMultiLine|textCapSentences"
+                android:lines="1"
+                android:maxLines="10"
+                android:padding="10dp"
+                android:textColor="@color/ettextcolor"
+                android:textColorHint="@color/ettextcolor"
+                android:textSize="20dp" />
+
+
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@string/font_style_main"
+                android:id="@+id/selectDate"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/location"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/lstextcolor"
+                android:padding="8dp"
+                android:text="Select date"
+                android:textAlignment="center"
+                android:textColor="@color/lstextcolor"
+                android:textColorHint="@color/ettextcolor"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <DatePicker
+                android:theme="@style/MyDatePicker"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:id="@+id/datePicker1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/selectDate"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/upload"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/datePicker1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18dp"
+                android:backgroundTint="@color/buttoncol"
+                android:padding="10dp"
+                android:text="Upload News"
+                android:textColor="#FFF" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/upload"/>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

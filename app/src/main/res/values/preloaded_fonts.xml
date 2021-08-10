@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/adamina</item>
+        <item>@font/allerta</item>
+        <item>@font/arbutus_slab</item>
+        <item>@font/archivo_black</item>
+        <item>@font/belleza</item>
+        <item>@font/bungee_outline</item>
+        <item>@font/galdeano</item>
+        <item>@font/lato</item>
+        <item>@font/lato_thin</item>
+        <item>@font/londrina_outline</item>
+        <item>@font/londrina_shadow</item>
+        <item>@font/londrina_solid</item>
+        <item>@font/ribeye_marrow</item>
+    </array>
+</resources>

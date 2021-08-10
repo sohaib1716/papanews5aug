@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "180313937489",
+    "project_id": "papanews-ak",
+    "storage_bucket": "papanews-ak.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180313937489:android:bccedc42940bbe585b4a70",
+        "android_client_info": {
+          "package_name": "com.papanews"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRSURGBOe-BVlL56n6XbMzNruROzaKm0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180313937489:android:f5518a5e3416eec05b4a70",
+        "android_client_info": {
+          "package_name": "com.papanews.ak"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRSURGBOe-BVlL56n6XbMzNruROzaKm0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

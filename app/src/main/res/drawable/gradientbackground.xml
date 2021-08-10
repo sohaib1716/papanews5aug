@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <gradient android:angle="135"-->
+<!--        android:startColor="#681919"-->
+<!--        android:endColor="#D61717"-->
+<!--        />-->
+    <!--    <stroke android:width="2dp"-->
+    <!--        android:color="#856AB5F1"/>-->
+
+    <solid android:color="@color/card_colors"/>
+    <stroke android:color="@color/card_colors"/>
+    <corners android:radius="5dp" />
+
+</shape>

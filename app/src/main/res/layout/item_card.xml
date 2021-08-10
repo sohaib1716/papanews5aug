@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="false"
+    android:focusable="true">
+
+
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/doodle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/datenews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/card_stack_view"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@string/font_style_main"
+        android:text="10th May 2021"
+        android:textColor="@color/card_colors_txt_inv"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="-32dp"
+        android:visibility="visible" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/selectCategorie"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please select your categories"
+        android:textColor="#fff"
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="@string/font_style_main"
+        />
+
+
+
+    <com.yuyakaido.android.cardstackview.CardStackView
+        android:clickable="true"
+        android:id="@+id/card_stack_view"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/viewt"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="70dp"
+        android:focusable="true">
+
+    </com.yuyakaido.android.cardstackview.CardStackView>
+
+
+
+    <!--    <RelativeLayout-->
+    <!--        android:background="#4A000000"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="60dp">-->
+
+    <!--        <ImageView-->
+    <!--            android:visibility="gone"-->
+    <!--            android:src="@drawable/noimage"-->
+    <!--            android:id="@+id/playimage"-->
+    <!--            android:layout_width="60dp"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            />-->
+
+    <!--        <TextView-->
+    <!--            android:visibility="gone"-->
+    <!--            android:focusable="true"-->
+    <!--            android:focusableInTouchMode="true"-->
+    <!--            android:singleLine="true"-->
+    <!--            android:ellipsize="marquee"-->
+    <!--            android:marqueeRepeatLimit ="marquee_forever"-->
+    <!--            android:scrollHorizontally="true"-->
+    <!--            android:fontFamily="@string/font_style_main"-->
+    <!--            android:textStyle="bold"-->
+    <!--            android:id="@+id/audioTitlle"-->
+    <!--            android:layout_width="200dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Title"-->
+    <!--            android:layout_marginTop="9dp"-->
+    <!--            android:layout_marginLeft="10dp"-->
+    <!--            android:textSize="15dp"-->
+    <!--            android:textColor="#ffffff"-->
+    <!--            android:layout_toRightOf="@+id/playimage"-->
+    <!--            />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/audioSub"-->
+    <!--            android:maxLines="1"-->
+    <!--            android:maxLength="25"-->
+    <!--            android:text="Subtitle"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_toRightOf="@+id/playimage"-->
+    <!--            android:layout_alignParentBottom="true"-->
+    <!--            android:layout_centerHorizontal="true"-->
+    <!--            android:layout_marginBottom="10dp"-->
+    <!--            android:layout_below="@+id/play"-->
+    <!--            android:textSize="10dp"-->
+    <!--            android:textColor="#ffffff"-->
+    <!--            />-->
+
+    <!--        <ImageView-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_centerHorizontal="true"-->
+    <!--            android:background="@drawable/ic_baseline_play_arrow_24"-->
+    <!--            android:id="@+id/play"-->
+    <!--            android:layout_width="35dp"-->
+    <!--            android:layout_height="35dp"-->
+    <!--            android:backgroundTint="#ffffff"-->
+    <!--            />-->
+
+    <!--        <Button-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_toLeftOf="@+id/play"-->
+    <!--            android:background="@drawable/ic_baseline_navigate_before_24"-->
+    <!--            android:backgroundTint="#ffffff"-->
+    <!--            android:id="@+id/pause"-->
+    <!--            android:layout_width="35dp"-->
+    <!--            android:layout_height="35dp"-->
+    <!--            />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/forward"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_marginRight="10dp"-->
+    <!--            android:layout_toRightOf="@+id/play"-->
+    <!--            android:layout_width="35dp"-->
+    <!--            android:layout_height="35dp"-->
+    <!--            android:background="@drawable/ic_baseline_navigate_next_24"-->
+    <!--            />-->
+
+    <!--    </RelativeLayout>-->
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:visibility="gone"
+        android:id="@+id/refresh"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/refresh"
+        android:layout_below="@+id/viewt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:tint="#ffffff"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:visibility="gone"
+        android:id="@+id/nonews"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*No news available for now*"
+        android:textColor="#ffffff"
+        android:fontFamily="@string/font_style_main"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.button.MaterialButton
+        android:visibility="gone"
+        android:id="@+id/mainLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="#ffffff"
+        android:background="@drawable/buttonstyle"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:fontFamily="@string/font_style_main"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login to see recomended feeds"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/mainLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:id="@+id/nrmlText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You Have viewed all the news for today"
+            android:textColor="#ffffff"
+            android:fontFamily="@string/font_style_main"
+            android:layout_marginTop="460dp"
+            tools:ignore="MissingConstraints" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        >
+
+        <ImageView
+            android:visibility="gone"
+            android:clickable="true"
+            android:layout_marginTop="500dp"
+            android:id="@+id/rewind"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="Rewind"
+            android:src="@drawable/rewind"
+            app:tint="#FFF"
+            android:focusable="true"
+            tools:ignore="MissingConstraints" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="#6A303030"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:src="@drawable/noimage"
+            android:id="@+id/playimage"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/audio_mux"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:textSize="12dp"
+            android:backgroundTint="#E2393939"
+            android:textAllCaps="false"
+            android:textStyle="normal"
+            android:textAlignment="center"
+            android:fontFamily="@font/sanfrancisco"
+            android:clickable="true"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="0dp"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit ="marquee_forever"
+            android:scrollHorizontally="true"
+            android:fontFamily="@font/lato"
+            android:textStyle="bold"
+            android:id="@+id/audioTitlle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:layout_toRightOf="@+id/playimage"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/audioSub"
+            android:maxLines="1"
+            android:maxLength="25"
+            android:text="Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/playimage"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="10dp"
+            android:textColor="#ffffff"
+            />
+
+        <ImageView
+            android:layout_marginRight="0dp"
+            android:layout_toLeftOf="@+id/forward"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_baseline_play_arrow_24"
+            android:id="@+id/play"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:backgroundTint="#ffffff"
+            />
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/play"
+            android:background="@drawable/ic_baseline_navigate_before_24"
+            android:backgroundTint="#ffffff"
+            android:id="@+id/pause"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:id="@+id/forward"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/ic_baseline_navigate_next_24"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewt"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp"/>
+</RelativeLayout>
