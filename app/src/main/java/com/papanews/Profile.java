@@ -94,7 +94,7 @@ public class Profile extends Fragment implements CardStackListener {
 
     SharedPreferences.Editor editor;
     SharedPreferences sharedPreferences;
-    String final_user_email;
+    String final_user_email = "";
 
     LinearLayout verify;
     int verifiedd;
@@ -192,6 +192,9 @@ public class Profile extends Fragment implements CardStackListener {
         logout_rel = view.findViewById(R.id.logout_relateive);
 
         if (skipfornow.equals("skip")) {
+            verify.setVisibility(View.GONE);
+            image_ver.setVisibility(View.GONE);
+
             papaimage.setVisibility(View.VISIBLE);
             imageView.setVisibility(View.GONE);
             logout.setVisibility(View.GONE);
@@ -246,18 +249,27 @@ public class Profile extends Fragment implements CardStackListener {
 //                Toast.makeText(getActivity(), "Ctegory Activity", Toast.LENGTH_SHORT).show();
                 editor.putInt("onceLogged", 0);
                 editor.apply();
-                Intent i = new Intent(getActivity(), select_category.class);
-                startActivity(i);
-                getActivity().overridePendingTransition(R.anim.slide_in_left, R.anim.nothing);
+                if (!skipfornow.equals("skip")) {
+                    Intent i = new Intent(getActivity(), select_category.class);
+                    startActivity(i);
+                    getActivity().overridePendingTransition(R.anim.slide_in_left, R.anim.nothing);
+                }else{
+                    Toast.makeText(getActivity(), "Please Login to view category", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
         save_rel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ki = new Intent(getActivity(), saved_posts.class);
-                startActivity(ki);
-                getActivity().overridePendingTransition(R.anim.slide_in_left, R.anim.nothing);
+
+                if (!skipfornow.equals("skip")) {
+                    Intent ki = new Intent(getActivity(), saved_posts.class);
+                    startActivity(ki);
+                    getActivity().overridePendingTransition(R.anim.slide_in_left, R.anim.nothing);
+                }else{
+                    Toast.makeText(getActivity(), "Please Login to view saved news", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -265,9 +277,15 @@ public class Profile extends Fragment implements CardStackListener {
         noti_rel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent li = new Intent(getActivity(), activity_notification.class);
-                startActivity(li);
-                getActivity().overridePendingTransition(R.anim.slide_in_left, R.anim.nothing);
+
+                if (!skipfornow.equals("skip")) {
+                    Intent li = new Intent(getActivity(), activity_notification.class);
+                    startActivity(li);
+                    getActivity().overridePendingTransition(R.anim.slide_in_left, R.anim.nothing);
+                }else{
+                    Toast.makeText(getActivity(), "Please Login to set notification preference", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
@@ -445,7 +463,6 @@ public class Profile extends Fragment implements CardStackListener {
             }
         });
 
-
         lang_rel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -456,7 +473,6 @@ public class Profile extends Fragment implements CardStackListener {
 //                finish();
             }
         });
-
 
         manager = new CardStackLayoutManager(getContext(), this);
         adapter = new CardStackAdapter(addList(), getContext());
@@ -494,26 +510,30 @@ public class Profile extends Fragment implements CardStackListener {
 
                             String number_fin = jsonObject.getString("number");
 
-                            if (number_fin.equals("0")) {
-                                verify.setVisibility(View.VISIBLE);
-                                image_ver.setVisibility(View.GONE);
-                            } else {
-                                editor = sharedPreferences.edit();
-                                editor.putInt("verified", 1);
-                                editor.apply();
-                                image_ver.setVisibility(View.VISIBLE);
-                                verify.setVisibility(View.GONE);
+                            if(!skipfornow.equals("skip")){
+                                if (number_fin.equals("0")) {
+                                    verify.setVisibility(View.VISIBLE);
+                                    image_ver.setVisibility(View.GONE);
+                                } else {
+                                    editor = sharedPreferences.edit();
+                                    editor.putInt("verified", 1);
+                                    editor.apply();
+                                    image_ver.setVisibility(View.VISIBLE);
+                                    verify.setVisibility(View.GONE);
+                                }
                             }
-
 
                             String image = jsonObject.getString("image");
 
                             user_name.setText(jsonObject.getString("fullname"));
 
-                            Picasso.get().load(image).placeholder(R.drawable.pr)
-                                    .resize(350, 350)
-                                    .into(imageView);
-
+                            try{
+                                Picasso.get().load(image).placeholder(R.drawable.pr)
+                                        .resize(350, 350)
+                                        .into(imageView);
+                            }catch(Exception e){
+                                Log.e("Exception ", String.valueOf(e));
+                            }
 
                         } catch (JSONException e) {
                             e.printStackTrace();

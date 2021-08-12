@@ -443,75 +443,73 @@ public class SignUp extends AppCompatActivity {
         buttonSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(nextint == 6 && textInputNumber.getText().length()==10) {
-                    buttonSignUp.setText("Verify OTP");
-                    number = String.valueOf(textInputNumber.getText());
-                    Log.e("entered no - ",number);
-                    userName = String.valueOf(textInputEditTextUsername.getText());
+                if(nextint == 6 ) {
+                    if(textInputNumber.getText().length()==10){
 
-                    Thread thread = new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            try {
-                                String apiKey = "xAwhP3qZM2JKP2iZx25819hVMVSTfSyGz0eg1INgFKhJ1u3OoXn57BTmrjXl";
-                                String sendId = "FSTSMS";
-                                //important step...
-                                otp = new Random().nextInt(8999) + 1000;//[1000 - 9999]
-                                Log.e("otp_sended",otp+"");
-                                String message = String.valueOf(otp);
-                                message = URLEncoder.encode(message, "UTF-8");
-                                String language = "english";
-                                String route = "p";
-//https://www.fast2sms.com/dev/bulkV2?authorization=xAwhP3qZM2JKP2iZx25819hVMVSTfSyGz0eg1INgFKhJ1u3OoXn57BTmrjXl&variables_values=5599&route=otp&numbers=8000420648
-                                //String myUrl = "https://www.fast2sms.com/dev/bulk?authorization=" + apiKey + "&sender_id=" + sendId + "&message=" + message + "&language=" + language + "&route=" + route + "&numbers=8000420648";
+                        buttonSignUp.setText("Verify OTP");
+                        number = String.valueOf(textInputNumber.getText());
+                        Log.e("entered no - ",number);
+                        userName = String.valueOf(textInputEditTextUsername.getText());
 
-//                                Toast.makeText(SignUp.this, "OTP sended = "+otp, Toast.LENGTH_SHORT).show();
+                        Thread thread = new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                try {
+                                    String apiKey = "xAwhP3qZM2JKP2iZx25819hVMVSTfSyGz0eg1INgFKhJ1u3OoXn57BTmrjXl";
+                                    String sendId = "FSTSMS";
+                                    //important step...
+                                    otp = new Random().nextInt(8999) + 1000;//[1000 - 9999]
+                                    Log.e("otp_sended",otp+"");
+                                    String message = String.valueOf(otp);
+                                    message = URLEncoder.encode(message, "UTF-8");
+                                    String language = "english";
+                                    String route = "p";
 
-//                                String myUrl = "https://www.fast2sms.com/dev/bulk?authorization=" + apiKey + "&sender_id=" + sendId + "&variables_values=" + "&message=" + message + "&language=" + language + "&route=" + route + "&numbers="+number;
-                                String myUrl = "https://www.fast2sms.com/dev/bulkV2?authorization=" + apiKey +"&variables_values=" + message + "&route=otp&numbers="+number;
-                                //sending get request using java..
-                                java.net.URL url = new URL(myUrl);
-                                HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
-                                con.setRequestMethod("GET");
-                                con.setRequestProperty("User-Agent", "Mozilla/5.0");
-                                con.setRequestProperty("cache-control", "no-cache");
-                                System.out.println("Wait..............");
-                                int code = con.getResponseCode();
-                                System.out.println("Response code : " + code);
-                                StringBuffer response = new StringBuffer();
-                                BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream()));
-                                while (true) {
-                                    String line = br.readLine();
-                                    if (line == null) {
-                                        break;
+                                    String myUrl = "https://www.fast2sms.com/dev/bulkV2?authorization=" + apiKey +"&variables_values=" + message + "&route=otp&numbers="+number;
+                                    //sending get request using java..
+                                    java.net.URL url = new URL(myUrl);
+                                    HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
+                                    con.setRequestMethod("GET");
+                                    con.setRequestProperty("User-Agent", "Mozilla/5.0");
+                                    con.setRequestProperty("cache-control", "no-cache");
+                                    System.out.println("Wait..............");
+                                    int code = con.getResponseCode();
+                                    System.out.println("Response code : " + code);
+                                    StringBuffer response = new StringBuffer();
+                                    BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream()));
+                                    while (true) {
+                                        String line = br.readLine();
+                                        if (line == null) {
+                                            break;
+                                        }
+                                        response.append(line);
                                     }
-                                    response.append(line);
+                                    System.out.println(response);
+                                    if (String.valueOf(response).contains("true")) {
+                                        Log.e("verify otp to - ",otp+"");
+                                        nextint=7;
+                                    }else{
+                                        Log.e("No OTP","Didn't got any OTP");
+                                    }
+                                } catch (Exception e) {
+                                    // TODO: handle exception
+                                    e.printStackTrace();
                                 }
-                                System.out.println(response);
-                                if (String.valueOf(response).contains("true")) {
-                                    Log.e("verify otp to - ",otp+"");
-                                    nextint=7;
-                                }else{
-                                    Log.e("No OTP","Didn't got any OTP");
-                                }
-                            } catch (Exception e) {
-                                // TODO: handle exception
-                                e.printStackTrace();
                             }
-                        }
-                    });
-                    thread.start();
+                        });
+                        thread.start();
 
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            textInputNumber.setText("");
-                            textInputNumber.setHint("Enter OTP");
-                            notop.setVisibility(View.VISIBLE);
-                        }
-                    }, 500);
-                }else{
-                    Toast.makeText(SignUp.this, "Phone number is not correct", Toast.LENGTH_SHORT).show();
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                textInputNumber.setText("");
+                                textInputNumber.setHint("Enter OTP");
+                                notop.setVisibility(View.VISIBLE);
+                            }
+                        }, 500);
+                    }else{
+                        Toast.makeText(SignUp.this, "Phone number is not correct", Toast.LENGTH_SHORT).show();
+                    }
                 }
                 if(nextint == 7){
                     //send otp

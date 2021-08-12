@@ -116,7 +116,7 @@ public class DashBoard extends AppCompatActivity {
     int min;
     int hrs;
     int sec;
-    int datanews = 42;
+    int datanews = 52;
     int check = 0;
     int finalcheck;
     int doitnow;
@@ -136,6 +136,7 @@ public class DashBoard extends AppCompatActivity {
     ImageView introslapsh;
     RelativeLayout relativeLayout;
     ImageView pp;
+    String skipfornow;
 
 //    @BindView(R.id.viewPager) ViewPager viewPager;
 //    @BindView(R.id.mainTitletab) TabLayout tabLayout;
@@ -154,16 +155,8 @@ public class DashBoard extends AppCompatActivity {
         relativeLayout = findViewById(R.id.relative);
         introslapsh = findViewById(R.id.introsplash);
         pp = findViewById(R.id.play);
-
         String[] tabTitles;
         //google analytics{analytics start}
-        if (!global.skipskip.equals("skip")) {
-            tabTitles = new String[]{"Profile", "Recommended", "Technology", "Politics",
-                    "Business", "Startup", "Entertainment", "Sports", "International", "Influencer", "Miscellaneous"};
-        }else{
-            tabTitles = new String[]{"Profile", "Technology", "Politics",
-                    "Business", "Startup", "Entertainment", "Sports", "International", "Influencer", "Miscellaneous"};
-        }
         //link = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ecpgr.cgiar.org%2Fin-situ-landraces-best-practice-evidence-based-database%2Flandrace%3FlandraceUid%3D13498&psig=AOvVaw0X67gZ_85hX2R8jytm1OU-&ust=1627987806163000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNCouamVkvICFQAAAAAdAAAAABAD";
 
 //        Retrofit retrofit = new Retrofit.Builder()
@@ -225,40 +218,6 @@ public class DashBoard extends AppCompatActivity {
                 });
 
 
-
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                viewPager.setAdapter(createCardAdapter());
-                new TabLayoutMediator(tabLayout, viewPager,
-                        new TabLayoutMediator.TabConfigurationStrategy() {
-                            @Override public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
-//                                tab.setText("Tab " + (position + 1));
-//                                viewPager.setPageTransformer(new FlipVerticalPageTransformer());
-                                viewPager.setOffscreenPageLimit(1);
-                                tabLayout.selectTab(tabLayout.getTabAt(1));
-                                tab.setText(tabTitles[position]);
-                            }
-                        }).attach();
-
-//                try {
-//                    adapter = new Adapter(getSupportFragmentManager());
-//                    viewPager.setOffscreenPageLimit(11);
-//                    viewPager.setAdapter(RecyclerView.adapter);
-//                    tabLayout.setupWithViewPager(viewPager);
-//                    Objects.requireNonNull(tabLayout.getTabAt(1)).select();
-//                } catch (Exception e) {
-//                    Log.e("thowingexception at", "Toolbar");
-////                    Toast.makeText(MainActivity.this, "crashing", Toast.LENGTH_SHORT).show();
-//                }
-                introslapsh.setVisibility(View.GONE);
-//                Log.e("listrecoppppppppp ", String.valueOf(itemsreco));
-
-//              scrollView.setVisibility(View.VISIBLE);
-            }
-        }, 2000);
-
         LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         DisplayMetrics dm = new DisplayMetrics();
@@ -313,6 +272,41 @@ public class DashBoard extends AppCompatActivity {
         final String fb_user = sharedPreferences.getString("facebook_username", "");
         final String fb_image = sharedPreferences.getString("facebook_image", "");
         global.userlogged.add(fb_user);
+
+        //skip or not
+        skipfornow = sharedPreferences.getString("skip_now", null);
+
+        if (!skipfornow.equals("skip")) {
+            tabTitles = new String[]{"Profile", "Recommended", "Technology", "Politics",
+                    "Business", "Startup", "Entertainment", "Sports", "International", "Influencer", "Miscellaneous"};
+        }else{
+            tabTitles = new String[]{"Profile", "Technology", "Politics",
+                    "Business", "Startup", "Entertainment", "Sports", "International", "Influencer", "Miscellaneous"};
+        }
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                viewPager.setAdapter(createCardAdapter());
+                new TabLayoutMediator(tabLayout, viewPager,
+                        new TabLayoutMediator.TabConfigurationStrategy() {
+                            @Override public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
+//                                tab.setText("Tab " + (position + 1));
+//                                viewPager.setPageTransformer(new FlipVerticalPageTransformer());
+                                viewPager.setOffscreenPageLimit(1);
+                                tabLayout.selectTab(tabLayout.getTabAt(1));
+                                tab.setText(tabTitles[position]);
+                            }
+                        }).attach();
+
+                introslapsh.setVisibility(View.GONE);
+//                Log.e("listrecoppppppppp ", String.valueOf(itemsreco));
+
+//              scrollView.setVisibility(View.VISIBLE);
+            }
+        }, 2000);
+
+
 
         //which language user has selected
         selectedlang = sharedPreferences.getString("selectedlang", "English");
